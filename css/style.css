@@ -298,3 +298,15 @@ li {
 .stars .empty {
     color: #ccc; /* Couleur des étoiles vides */
 }
+.profile-section {
+    width: 60%;
+    padding-left: 20px;
+}
+
+
+.date {
+    color: #00a9b5;
+    text-align: right;
+    width: 120px;
+    margin-left: auto;
+}
