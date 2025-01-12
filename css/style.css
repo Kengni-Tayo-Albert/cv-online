@@ -1,0 +1,189 @@
+/* Styles généraux */
+body {
+    font-family: 'Raleway', 'sans-serif';
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('https://fonts.gstatic.com/s/raleway/v19/1Ptug8zYS_SKggPN4iE.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* En-tête */
+.header {
+    background: #00a9b5;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    position: absolute;
+    left: 20px;
+}
+
+.header-info {
+    text-align: center;
+}
+
+.header-info h1 {
+    margin: 10px 0 5px;
+    font-size: 2.5em;
+}
+
+.header-info h2 {
+    font-size: 1.2em;
+    font-weight: normal;
+    margin: 5px 0 10px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.left-info,
+.right-info {
+    width: 48%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Pour mettre l'image et l'adresse email sur la même ligne */
+.left-info .email {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+/* Pour mettre l'adresse postale à droite de l'adresse email */
+.left-info .address {
+    margin-left: auto;
+    margin-right: 30px; /* Ajout d'un espace conséquent */
+}
+
+/* Pour ajuster l'alignement du permis B et du numéro de téléphone */
+.right-info .phone-license {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.right-info .license-icon {
+    margin-right: 8px;
+}
+
+/* Effet n° 1 : Changement de couleur et ajout d'un trait vertical */
+.profile-section ul li:hover {
+    background-color: #e0e0e0; /* Fond semi-transparent survolé */
+    border-left: 4px solid #00a9b5; /* Trait vertical à gauche */
+    padding-left: 10px; /* Ajustement du contenu à cause du trait */
+    transition: background-color 0.3s ease, border-left 0.3s ease;
+}
+
+/* Effet n° 2 : Zoom sur la photo de profil */
+.profile-photo {
+    cursor: zoom-in; /* Indicateur de zoom au survol */
+    transition: transform 0.3s ease; /* Animation douce */
+}
+
+.profile-photo:hover {
+    transform: scale(1.05); /* Zoom léger au survol */
+}
+
+.profile-photo:active {
+    transform: scale(1); /* Réinitialisation pour éviter un bug */
+}
+
+/* Image s'ouvre en grand */
+.profile-photo {
+    cursor: pointer;
+}
+.profile-photo:active {
+    transform: none;
+}
+
+.mail{
+    color: white;
+    text-decoration: none;
+}
+
+.phone{
+    color: white;
+    text-decoration: none;
+    position: relative;
+    margin-top: 30px;
+}
+
+.icon-mail{
+    filter: brightness(0) invert(1);
+    position: relative;
+    transition:transform 0.5s ease;
+    transform: translateY(50px);
+    margin-left: -30px;
+}
+
+.phone-icon{
+    filter: brightness(0) invert(1);
+    position: relative;
+    transition:transform 0.5s ease;
+    transform: translateY(10px);
+    margin-left: -20px;
+}
+
+.address-icon{
+    filter: brightness(0) invert(1);
+    position: relative;
+    transition:transform 0.5s ease;
+    transform: translateY(5px);
+    margin-left: -30px;
+    margin-top: 20px;
+}
+.address{
+    position: relative;
+    margin-bottom: 20px;
+    margin-left: 50px; /* Ajout d'un espace conséquent */
+}
+.license-icon{
+    filter: brightness(0) invert(1);
+    position: relative;
+    transition:transform 0.5s ease;
+    transform: translate(5px);
+    margin-bottom: -5px;
+}
