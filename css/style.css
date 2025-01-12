@@ -187,3 +187,114 @@ body {
     transform: translate(5px);
     margin-bottom: -5px;
 }
+
+/*sidebar*/
+/* Main Content */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.sidebar {
+    width: 35%;
+    background-color: #e0e0e0; /* Fond gris */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section {
+    width: 60%;
+    padding-left: 20px;
+}
+
+h3 {
+    color: #00a9b5;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #00a9b5;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.colored-square {
+    width: 10px;
+    height: 10px;
+    background-color: #00a9b5;
+    margin-right: 10px;
+}
+.language-detail-1{
+    margin-left: auto;
+}
+
+.language-detail-2{
+    margin-left: auto;
+}
+
+/* Effet n° 1 : Changement de couleur et ajout d'un trait vertical */
+.profile-section ul li:hover {
+    background-color: #e0e0e0; /* Fond semi-transparent survolé */
+    border-left: 4px solid #00a9b5; /* Trait vertical à gauche */
+    padding-left: 10px; /* Ajustement du contenu à cause du trait */
+    transition: background-color 0.3s ease, border-left 0.3s ease;
+}
+
+/* Effet n° 2 : Zoom sur la photo de profil */
+.profile-photo {
+    cursor: zoom-in; /* Indicateur de zoom au survol */
+    transition: transform 0.3s ease; /* Animation douce */
+}
+
+.profile-photo:hover {
+    transform: scale(1.05); /* Zoom léger au survol */
+}
+
+.profile-photo:active {
+    transform: scale(1); /* Réinitialisation pour éviter un bug */
+}
+
+/* Image s'ouvre en grand */
+.profile-photo {
+    cursor: pointer;
+}
+.profile-photo:active {
+    transform: none;
+}
+/* Conteneur des étoiles */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* Les étoiles */
+.stars {
+    display: flex;
+    gap: 5px; /* Espacement entre les étoiles */
+}
+
+.stars span {
+    font-size: 20px; /* Taille des étoiles */
+    color: #00a9b5; /* Couleur des étoiles remplies */
+}
+
+.stars .empty {
+    color: #ccc; /* Couleur des étoiles vides */
+}
